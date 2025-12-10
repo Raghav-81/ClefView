@@ -1,0 +1,7 @@
+{
+  "name": "SoniScript AI",
+  "description": "An advanced AI-powered audio-to-sheet music transcription assistant featuring system architecture documentation and a live Gemini-powered demo.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
