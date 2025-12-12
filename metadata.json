@@ -1,6 +1,6 @@
 {
-  "name": "SoniScript AI",
-  "description": "An advanced AI-powered audio-to-sheet music transcription assistant featuring system architecture documentation and a live Gemini-powered demo.",
+  "name": "ClefView",
+  "description": "An advanced AI-powered audio-to-sheet music transcription assistant featuring multi-part instrument selection, live editing, and transposition tools.",
   "requestFramePermissions": [
     "microphone"
   ]

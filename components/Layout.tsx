@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppView, NavItem } from '../types';
-import { LayoutDashboard, FileText, Menu, X, Mic2 } from 'lucide-react';
+import { Mic2, Menu, X } from 'lucide-react';
 
 interface LayoutProps {
   currentView: AppView;
@@ -9,8 +9,7 @@ interface LayoutProps {
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { id: AppView.DASHBOARD, label: 'Transcribe', icon: <Mic2 className="w-5 h-5" /> },
-  { id: AppView.ARCHITECTURE, label: 'System Architecture', icon: <FileText className="w-5 h-5" /> },
+  { id: AppView.DASHBOARD, label: 'Transcribe Studio', icon: <Mic2 className="w-5 h-5" /> },
 ];
 
 const Layout: React.FC<LayoutProps> = ({ currentView, onNavigate, children }) => {
@@ -22,8 +21,8 @@ const Layout: React.FC<LayoutProps> = ({ currentView, onNavigate, children }) =>
       <aside className="hidden md:flex flex-col w-64 bg-slate-950 border-r border-slate-800 h-screen sticky top-0">
         <div className="p-6 border-b border-slate-800">
           <div className="flex items-center gap-2 text-cyan-400">
-             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold text-lg">S</div>
-             <span className="font-bold text-xl tracking-tight text-white">SoniScript</span>
+             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center text-white font-bold text-lg">C</div>
+             <span className="font-bold text-xl tracking-tight text-white">ClefView</span>
           </div>
         </div>
         
@@ -47,7 +46,7 @@ const Layout: React.FC<LayoutProps> = ({ currentView, onNavigate, children }) =>
         <div className="p-4 border-t border-slate-800">
           <div className="p-3 bg-slate-900 rounded-lg border border-slate-800 text-xs text-slate-500">
             <p>Powered by <span className="text-slate-300 font-semibold">Gemini 2.5 Flash</span></p>
-            <p className="mt-1">v1.0.2 Stable</p>
+            <p className="mt-1">v2.0 Pro</p>
           </div>
         </div>
       </aside>
@@ -55,8 +54,8 @@ const Layout: React.FC<LayoutProps> = ({ currentView, onNavigate, children }) =>
       {/* Mobile Header */}
       <div className="md:hidden flex items-center justify-between p-4 bg-slate-950 border-b border-slate-800 sticky top-0 z-50">
         <div className="flex items-center gap-2">
-           <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold">S</div>
-           <span className="font-bold text-lg text-white">SoniScript</span>
+           <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center text-white font-bold">C</div>
+           <span className="font-bold text-lg text-white">ClefView</span>
         </div>
         <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="p-2 text-slate-300">
           {isMobileMenuOpen ? <X /> : <Menu />}

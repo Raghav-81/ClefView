@@ -12,13 +12,14 @@ export interface AudioAnalysisResult {
   instruments: string[];
   tempo: string;
   keySignature: string;
-  transcription: string; // ABC Notation
+  // Map of instrument name (key) to ABC notation (value). 
+  // Should always contain a 'Full Score' key.
+  partTranscriptions: Record<string, string>; 
   description: string;
 }
 
 export enum AppView {
   DASHBOARD = 'DASHBOARD',
-  ARCHITECTURE = 'ARCHITECTURE',
 }
 
 export interface NavItem {
